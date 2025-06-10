@@ -1,0 +1,626 @@
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<style>
+      @font-face {
+        font-family: 'marcellus';
+        src: url('../fonts/Marcellus-Regular.ttf');
+    }
+
+    strong {
+        font-family:courier;
+        font-weight:bold;
+    }
+
+    code {
+        font-family:courier;
+        font-weight:normal;
+    }
+
+    pre {
+        font-family:courier;
+        font-weight:normal;
+    }
+
+
+    a:link {
+        color: CornflowerBlue;
+        text-decoration: none;
+    }
+
+    a:visited {
+        color: CadetBlue;
+        text-decoration: none;
+    }
+
+
+    * {
+        background-color:#ffffff;
+        font-family: 'marcellus', 'optima', 'palatino', 'sans-serif';
+    }
+
+    @media screen and (orientation:landscape){
+
+        .page {
+      width:75%;
+      background-color:#cccccc;
+      text-align: left;
+      padding:2%;
+      margin:auto;
+        }
+
+        .noscreen {display: none;} 
+        .cleaner {clear: both; height: 0; font-size: 0; visibility: hidden;}
+        .spacer {clear: both; height: 10px; font-size: 0; visibility: hidden;}
+
+        .left {
+      display:inline;
+      background-color:#cccccc;
+      float:left;
+      width: 20%;
+        }
+
+        .right {
+      display:inline;
+      background-color:#cccccc;
+      float:right;
+      width: 77%;
+        }
+
+        .inner {
+      background-color:#ffffff;
+      text-align: left;
+      padding: 2% 5% 2% 5%;
+      margin:0 auto;
+        }
+
+        .header {
+      height:145px;
+      background-color: #003366;
+      font-size: large;
+      color: #CCCC99;
+      padding: 1em;
+        }
+
+        .footer {
+      background-color: #003366;
+      color: #CCCC99;
+      text-align: center;
+      font-size: small;
+        }
+
+        .header h1 {
+      background-color: #003366;
+      text-align:center;
+        }
+
+        .header ul {
+      background-color: #003366;
+      list-style-type: none;
+      padding: 0;
+        }
+
+        .header ul li {
+      background: #CCCC99;
+      color: #003366;
+      display: block;
+      font-weight: bold;
+      font-size: 18;
+      float: left;
+      width: 20%;
+            height: 5.5ex;
+      text-align: center;
+      padding: 0.5ex 0 0.5ex 0;
+        }
+
+        .header ul li a {
+      background: #CCCC99;
+      color: #003366;
+      text-decoration: none;
+      padding: 0.5ex 0 0.5ex 0;
+        }
+
+        .header ul li a:hover {
+      color: #CCCC99;
+      background: #003366;
+        }
+
+        .left h2 {
+      font-size: 20;
+      font-weight: bold;
+        }
+
+        .left h3 {
+      font-size: 18;
+      font-weight: bold;
+        }
+
+        .left ul {
+      list-style-type: none;
+      text-align: center;
+      padding: 0;
+        }
+
+        .left ul li {
+      background: #003366;
+      width: 100%;
+      color: #cccccc;
+      padding: 1ex 0 1ex 0;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-size: 15;
+        }
+
+        .left ul li a {
+      background: #003366;
+      width: 100%;
+      color: #cccccc;
+      text-decoration: none;
+      display: block;
+        }
+
+        .left ul li a:hover {
+      color: #003366;
+      background: #cccccc;
+        }
+
+
+        .right h2 {
+      font-size: 20;
+      font-weight: bold;
+        }
+
+        .right h3 {
+      font-size: 18;
+      font-weight: bold;
+        }
+
+    }
+
+
+    @media screen and (orientation:portrait){
+
+        .page {
+      width:auto;
+      background-color:#cccccc;
+      text-align: left;
+      padding:2%;
+      margin:auto;
+        }
+
+        .noscreen {display: none;} 
+        .cleaner {clear: both; height: 0; font-size: 0; visibility: hidden;}
+        .spacer {clear: both; height: 5px; font-size: 0; visibility: hidden;}
+
+        .left {
+      display:inline;
+      float:none;
+      text-align:left;
+      padding: 0;
+      width: auto;
+        }
+
+        .right {
+      display:inline;
+      float:none;
+      text-align:left;
+      padding:0;
+      width: auto;
+        }
+
+        .inner {
+      background-color:#ffffff;
+      text-align: left;
+      padding: 1ex 1em 1ex 1em;
+      margin:0 auto;
+        }
+
+        .header {
+      height:auto;
+      float:none;
+      background-color: #003366;
+      color: #CCCC99;
+      padding:2%;
+        }
+
+        .footer {
+      background-color: #003366;
+      color: #CCCC99;
+      text-align: center;
+      font-size:x-small;
+      font-wieght: bold;
+        }
+
+        .header h1 {
+      background-color: #003366;
+      text-align:center;
+        }
+
+        .header ul {
+      list-style-type: none;
+      background-color: #CCCC99;
+      color:  #003366;
+      padding: 0;
+      font-size: larger;
+        }
+
+        .header ul li {
+      display: block;
+      width: auto;
+      background-color: #CCCC99;
+      color:  #003366;
+      text-align:center;
+      font-weight: bold;
+      padding: 0.2ex 0 0.2ex 0;
+        }
+
+        .header ul li a {
+      display: block;
+      background-color: #CCCC99;
+      color:  #003366;
+      text-decoration: none;
+      padding: 0.2ex 0 0.2ex 0;
+        }
+
+        .header ul li a:hover {
+      display: block;
+      background-color: #003366;
+      color:  #CCCC99;
+        }
+
+        .left h2 {
+      font-weight: bold;
+      font-size: larger;
+        }
+
+        .left h3 {
+      font-weight: bold;
+      font-size: larger;
+        }
+
+        .left ul {
+      padding: 0.2ex 0 0.2ex 0;
+      list-style-type: none;
+      text-align: center;
+      clear: left;
+      font-size: larger;
+        }
+
+        .left ul li {
+      background: #003366;
+      width: auto;
+      height: auto;
+      padding: 0.2ex 0 0.2ex 0;
+      color: #cccccc;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+        }
+
+        .left ul li a {
+      background: #003366;
+      width: auto;
+      height: auto;
+      padding: 0.2ex 0 0.2ex 0;
+      color: #cccccc;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-weight: bold;
+        }
+
+        .left ul li a:hover {
+      color: #003366;
+      background: #cccccc;
+        }
+
+
+        .right h2 {
+      font-weight: bold;
+      font-size: larger;
+        }
+
+        .right h3 {
+      font-weight: bold;
+      font-size: larger;
+        }
+    }
+
+
+</style>
+<title>Madhavan Mukund</title>
+</head>
+
+<body>
+<div class="page">
+  <div class="header">
+    <h1>Madhavan Mukund </h1>
+
+    <ul>
+      <li> <a href="https://www.cmi.ac.in/~madhavan/index.html">Home</a>
+      </li><li> <a href="https://www.cmi.ac.in/~madhavan/activities.html">Professional Activities</a>
+      </li><li> <a href="https://www.cmi.ac.in/~madhavan/publications.html">Publications</a>
+      </li><li> <a href="https://www.cmi.ac.in/~madhavan/teaching.html">Teaching</a>
+      </li><li> <a href="https://www.cmi.ac.in/~madhavan/personal.html">Personal</a>
+    </li></ul>
+  </div>
+
+  <hr class="spacer">
+
+  <div class="left">
+    <div class="inner">
+      <h2>Teaching</h2>
+
+      <ul>
+	<li> <a href="https://www.cmi.ac.in/~madhavan/teaching.html#current">Current Semester</a>
+	</li><li> <a href="https://www.cmi.ac.in/~madhavan/teaching.html#past">Past Courses</a>
+      </li></ul>
+
+    </div>
+
+    <hr class="spacer">
+
+
+  
+
+
+  <div class="inner">
+    <h3>Data Mining and Machine Learning,<br>Jan-Apr 2025</h3>
+
+    <ul>
+      <li><a href="https://www.cmi.ac.in/~madhavan/courses/dmml2025/index.php#admin">Administrative<br>Details</a>
+      </li><li class="single"> <a href="https://www.cmi.ac.in/~madhavan/courses/dmml2025/index.php#plan">Course Plan</a>
+      </li><li class="single"> <a href="https://www.cmi.ac.in/~madhavan/courses/dmml2025/index.php#assignments">Assignments</a>
+      </li><li class="single"> <a href="https://www.cmi.ac.in/~madhavan/courses/dmml2025/index.php#lectures">Lecture Summary</a>
+    </li></ul>
+  </div>
+</div>
+
+<div class="right">
+
+  <div class="inner">
+   <h3 align="center">Assignment 1: Frequent itemsets</h3>
+   
+   <h4 align="center">8 Feb, 2025<br>
+     Due <strike>21 Feb</strike> 23 Feb, 2025</h4>
+  </div>
+
+  <hr class="spacer">
+  <div class="inner">
+
+    <ul>
+
+      <li> <a href="#dataset">The Bag of Words Dataset</a>
+      </li><li> <a href="#task">The Task</a>
+      </li><li> <a href="#solve">Solving the Task</a>	
+
+
+  </li></ul></div>
+
+  <hr class="spacer">
+
+  <div class="inner" id="dataset">
+
+    <h4>The Bag of Words Dataset</h4>
+
+    <p>
+      The <a href="http://archive.ics.uci.edu/ml/datasets/Bag+of+Words"><em>Bag
+	    of Words Data Set</em></a> in the UCI Machine Learning
+      Repository contains five text collections.
+    </p>
+
+    <p>
+      In each of these text collections, each document is
+      summarized as a bag (multiset, set with multiplicities) of
+      words. The individual documents are identified by document
+      IDs and the words are identified by word IDs.
+    </p>
+
+    <p>
+      After some cleaning up, in each collection the vocabulary
+      of unique words has been truncated to only keep words that
+      occurred more than ten times overall in that collection.
+    </p>
+
+    <p>
+      For each collection <b>XYZ</b>:
+    </p>
+
+
+    <ul>
+      <li>
+	<p>
+	  <b>vocab.XYZ.txt</b> is the vocabulary file, listing
+	  all words that appear in the collection <b>XYZ</b>, one
+	  word per line.  Each word has an implicit wordID that
+	  is its line number in this file, starting with 1 (the
+	  word on line 1 has wordID 1, the word on line 2 has
+	  wordID 2, ...)
+	</p>
+
+      </li><li>
+	<p>
+	  <b>docword.XYZ.txt</b> lists out the number of times
+	  each word in
+	  <b>vocab.XYZ.txt</b> occurs in each document (only
+	  non-zero counts are recorded).
+	</p>
+
+	<p>
+	  The file docword.XYZ.txt begins with 3 header lines
+	</p>
+
+<pre>     D
+     W
+     NNZ
+</pre>
+
+	<p>
+	  where <b>D</b> is the number of documents in the
+	  collection, <b>W</b> is the number of words whose
+	  frequency is counted (i.e., <b>W</b> is the number of
+	  words in <b>vocab.XYZ.txt</b>) and <b>NNZ</b> is the
+	  number of non-zero frequency entries for this
+	  collection (i.e. <b>NNZ</b> is 3 less than the number
+	  of lines in <b>docword.XYZ.txt</b>).
+	</p>
+
+	<p>
+	  This is followed by NNZ lines of the form
+	</p>
+
+<pre>     docID wordID count
+</pre>
+
+	<p>
+	  where count is the number of time the word with id
+	  wordID appears in document with id docID.  Remember
+	  that only non-zero counts are recorded.
+	</p>
+
+    </li></ul>
+
+    <h4>Information about the datasets in the repository</h4>
+
+    <p>Enron Emails:</p>
+
+<pre>     orig source: www.cs.cmu.edu/~enron
+     D=39861
+     W=28102
+     N=6,400,000 (approx)
+</pre>
+
+    <p>NIPS full papers:</p>
+<pre>     orig source: books.nips.cc
+     D=1500
+     W=12419
+     N=1,900,000 (approx)
+</pre>
+
+    <p>KOS blog entries:</p>
+<pre>     orig source: dailykos.com
+     D=3430
+     W=6906
+     N=467714
+</pre>
+
+    <p>NYTimes news articles:</p>
+<pre>     orig source: ldc.upenn.edu
+     D=300000
+     W=102660
+     N=100,000,000 (approx)
+</pre>
+
+    <p>PubMed abstracts:</p>
+<pre>     orig source: www.pubmed.gov
+     D=8200000
+     W=141043
+     N=730,000,000 (approx)
+</pre>
+
+
+  </div>
+
+  <hr class="spacer">
+
+  <div class="inner" id="task">
+
+    <h4>The Task</h4>
+
+    <p>
+      Your task is to compute frequent itemsets for this data. 
+      As usual, a <b>K</b>-itemset of words is a collection of
+      words of size <b>K</b> that occur together in the same
+      document. Write a program to find
+      all <b>K</b>-itemsets of words occurring with
+      frequency <b>F</b>, where <b>K</b> and <b>F</b>
+      are parameters to your program.
+    </p>
+
+    <p>
+      The datasets are of different sizes. Report your results on
+      the three smaller datasets (Enron emails, NIPS full
+      papers, KOS blog entries) for different values of <b>K</b>
+      and <b>F</b>. In addition to the actual output, report the
+      time it took to complete the job and, in case your program
+      did not terminate for a given dataset and combination
+      of <b>K</b> and <b>F</b>, report how long you tried before
+      you gave up.
+    </p><p>
+
+  </p></div>
+  
+  <hr class="spacer">
+
+  <div class="inner" id="solve">
+
+    <h4>Solving the Task</h4>
+
+    <ul>
+
+      <li><p>You can use any programming language, including
+        Python and R.  You can make use of standard packages for
+        analytics and machine learning.  Clearly document any
+        external packages used by your code.</p>
+
+      </li><li><p>Submit the following via Moodle, as a Jupyter
+        notebook if you are using Python and as a single archive
+        (zip, tar.gz, …) otherwise:</p>
+
+      <ul>
+	<li>
+	  <p>
+	    The code you used to solve the assignment.
+	  </p>
+
+	</li><li>
+	  <p>
+	    If you have voluminous output to report, save it
+  	    somewhere on the cloud and provide a link.
+	  </p>
+
+        </li><li>
+	  <p>
+	    A short write up describing how your code ran on the
+            data sets: the parameters used, time taken, space
+            required, and anything else of interest.
+	  </p>
+
+      </li></ul>
+
+      </li><li>
+	<p>
+	  You may work alone or in groups of two.  Each group
+	  makes a single submission to Moodle.  Use either
+	  person's Moodle account to submit.  The submission
+	  should mention the names of the two partners.
+	</p>
+
+      </li><li>
+	<p>
+	  There will be a short oral presentation and
+	  question/answer session for each submission.
+	</p>
+
+    </li></ul>
+
+  </div>
+</div>
+
+
+<hr class="cleaner">
+
+<hr class="spacer">
+
+<div class="footer">
+
+    Last modified: 20 Feb 2025
+
+</div>
+
+</div>
+
+
+</body></html>
